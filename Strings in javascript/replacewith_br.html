@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h1>Welcome you all</h1>
+      <p>
+      </p>
+      <button onclick="replacewithbr()">click on me</button>
+
+    <button onclick="myFunc()">click</button>
+
+    <p id="para"></p>
+      <script>
+      function  replacewithbr(){
+
+     let p = `Geeks for Geeks is 
+       a computer science portal 
+       where people study computer science`;
+            let para= document.querySelector("p");
+            para.innerText=p;
+
+            p=p.replace(/(?:\r\n|\r|\n)/g,"<br>");
+             para.innerText=p;
+        }
+
+        let str = `Geeks for Geeks is 
+       a computer science portal 
+       where people study computer science`;
+      
+    let para = document.getElementById("para");
+      
+    para.innerHTML = str;
+      
+    function myFunc() {
+      // Replace the \n with <br>
+      str = str.replace(/(?:\r\n|\r|\n)/g, "<br>");
+      
+      // Update the value of paragraph
+      para.innerHTML = str;
+    }
+      </script>
+</body>
+</html>
